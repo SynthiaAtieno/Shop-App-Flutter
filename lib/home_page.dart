@@ -6,28 +6,31 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const border = OutlineInputBorder(
-      borderSide: BorderSide(color: Color.fromRGBO(255, 255, 255, 1)),
+      borderSide: BorderSide(color: Color.fromRGBO(253, 240, 250, 1)),
       borderRadius: BorderRadius.horizontal(left: Radius.circular(50)),
     );
     return const Scaffold(
-      body: SafeArea(
-        child: Row(
-          children: [
-            Text(
-              'Shoe\nCollection',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            Expanded(
-              child: TextField(
-                decoration: InputDecoration(
-                    hintText: "Searh",
-                    prefixIcon: Icon(Icons.search),
-                    border: border,
-                    focusedBorder: border,
-                    enabledBorder: border),
+      body: Padding(
+        padding: EdgeInsets.only(top: 8, left: 8),
+        child: SafeArea(
+          child: Row(
+            children: [
+              Text(
+                'Shoe\nCollection',
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
-            )
-          ],
+              Expanded(
+                child: TextField(
+                  decoration: InputDecoration(
+                      hintText: "Searh",
+                      prefixIcon: Icon(Icons.search),
+                      border: border,
+                      focusedBorder: border,
+                      enabledBorder: border),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
