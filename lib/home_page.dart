@@ -6,9 +6,26 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-    body: Text('Shoe\nCollection', style: TextStyle(
-      fontWeight: FontWeight.bold
-    ),),
+      body: SafeArea(
+        child: Row(
+          children: [
+            Text(
+              'Shoe\nCollection',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Expanded(
+              child: TextField(
+                decoration: InputDecoration(
+                    hintText: "Searh",
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.horizontal(
+                            left: Radius.circular(50)))),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
