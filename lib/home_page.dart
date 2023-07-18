@@ -5,6 +5,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const border = OutlineInputBorder(
+      borderSide: BorderSide(color: Color.fromRGBO(255, 255, 255, 1)),
+      borderRadius: BorderRadius.horizontal(left: Radius.circular(50)),
+    );
     return const Scaffold(
       body: SafeArea(
         child: Row(
@@ -18,9 +22,9 @@ class HomePage extends StatelessWidget {
                 decoration: InputDecoration(
                     hintText: "Searh",
                     prefixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.horizontal(
-                            left: Radius.circular(50)))),
+                    border: border,
+                    focusedBorder: border,
+                    enabledBorder: border),
               ),
             )
           ],
