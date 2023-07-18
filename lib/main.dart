@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop__app/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.from(
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color.fromARGB(255, 241, 218, 7))),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 241, 218, 7),
+        ),
+      ),
+      home: const HomePage(),
     );
   }
 }
