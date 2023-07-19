@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
       borderSide: BorderSide(color: Color.fromRGBO(253, 240, 250, 1)),
       borderRadius: BorderRadius.horizontal(left: Radius.circular(50)),
     );
+    const filters = "hello";
     return const Scaffold(
       body: Padding(
         padding: EdgeInsets.only(top: 8, left: 8),
@@ -28,7 +29,10 @@ class HomePage extends StatelessWidget {
                       focusedBorder: border,
                       enabledBorder: border),
                 ),
-              )
+              ),
+              Chip(
+                label: Text("Adidas"),
+              ),
             ],
           ),
         ),
