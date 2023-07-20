@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.all(16.0),
             child: Row(
-              
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'Shoe\nCollection',
