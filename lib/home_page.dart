@@ -13,26 +13,30 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.only(top: 8, left: 8),
         child: SafeArea(
-          child: Row(
-            children: [
-              Text(
-                'Shoe\nCollection',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Expanded(
-                child: TextField(
-                  decoration: InputDecoration(
-                      hintText: "Searh",
-                      prefixIcon: Icon(Icons.search),
-                      border: border,
-                      focusedBorder: border,
-                      enabledBorder: border),
+          child: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Row(
+              
+              children: [
+                Text(
+                  'Shoe\nCollection',
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-              ),
-              Chip(
-                label: Text("Adidas"),
-              ),
-            ],
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "Searh",
+                        prefixIcon: Icon(Icons.search),
+                        border: border,
+                        focusedBorder: border,
+                        enabledBorder: border),
+                  ),
+                ),
+                Chip(
+                  label: Text("Adidas"),
+                ),
+              ],
+            ),
           ),
         ),
       ),
