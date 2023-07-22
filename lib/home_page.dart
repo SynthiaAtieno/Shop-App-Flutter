@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
               children: [
                 Text(
                   'Shoe\nCollection',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontsize: 35),
                 ),
                 Expanded(
                   child: TextField(
